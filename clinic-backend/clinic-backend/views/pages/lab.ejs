@@ -1,0 +1,79 @@
+<%- include ("../partials/header") %>
+    <%- include ("../partials/sideMenu") %>
+  <div class="body-container">
+      <u> <h1>Labs</h1> </u>
+      <section class="default-section">
+          <div class="information">
+              <select name="nameoflabs" onchange="location = `/labs/${this.value}`">
+                    <% labsNames.forEach(function (name) {  %>
+                       <% if(lab && lab.lab_name === name) {%>
+                        <option selected value="<%= name %>"><%= name %></option>
+                        <% } else { %>
+                            <option value="<%= name %>"><%= name %></option>
+                        <% } %>
+                <% }) %>
+            </select>
+              </div>
+      </section> 
+      <section class="default-section">
+          <% if (messages.error) { %>
+            <p class="alert alert-error"><%= messages.error%></p>
+            <% }%>
+            <% if (messages.success) { %>
+                <p class="alert alert-success"><%= messages.success%></p>
+                <% }%>
+      </section>
+      <section class="default-section">
+          <% if(lab) { %>
+            <div class="info-section">
+                <div class="info-item">
+                    <img src="/public/images/name.png" alt= "Avatar"> 
+                    <span> <%= lab.lab_name %> </span>
+                </div>
+                <div class="info-item">
+                    <img src="/public/images/address.png" alt= "Avatar"/>
+                    <span> <%= lab.address %> </span>
+                </div>
+                <span class="horizintal-line"></span>
+                <div class="info-item">
+                    <img src="/public/images/phone.png" alt= "Avatar">  
+                    <span><%= lab.phone %></span>
+                </div>
+                <div class="info-item">
+                    <img src="/public/images/email.png" alt= "Avatar">
+                    <span><%= lab.email %></span>
+                </div>
+                <span class="horizintal-line"></span>
+                <div class="info-item">
+                    <img src="/public/images/service.png" alt= "Avatar" style="width:45px; border-radius:50px ;border-bottom:1px solid rgb(24, 23, 23);">
+                    <span><a href="/labs/services/<%= lab.phone %>"> services </a></span>
+                </div>
+                <div class="info-item">
+                    <img src="/public/images/requiredsample.png" alt= "Avatar">
+                    <span><a href="/labs/Requiredsample/<%= lab.phone %>"> Required Sample </a> </span>
+                </div>
+              </div>
+              <form method="POST" action="/labs/message">
+                <p style=" width: 20%;
+                padding: 12px;
+                border: 1px solid rgb(24, 23, 23);
+                border-radius: 20px;
+                box-sizing: border-box;
+                color: black;
+                background-color: #5a5959;
+                margin-top: 6px;
+                margin-bottom: 16px;">  Send Message </p><br> 
+                <input hidden required name="lab_phone" value="<%= lab.phone %>"/>
+                <input hidden required name="lab_name" value="<%= lab.lab_name %>"/>
+                  <textarea  style="height:150px ;width:700px" required name="require_sam" id="require_sam">  write the massage....</textarea> 
+                  <input type ="submit" value="send" style="border-radius: 20px; color: blue; width: 70px; height: 40px;"/>
+              </form>
+          <% } else { %>
+            <p>No Selected Lab to show</p>
+            <% } %>
+      </section>
+  </div>
+</div>
+
+  </body>
+</html>

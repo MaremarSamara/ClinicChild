@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;1,300&display=swap" rel="stylesheet">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Labs </title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Jost', sans-serif;
+
+      }
+    input[type=text] {
+      width: 80%;
+      padding: 12px;
+      border: 1px solid rgb(177, 50, 149);
+      border-radius: 20px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    .horizintal-line{
+      border-bottom: 1px solid #696969;
+      margin: 10px 5px;
+      width: 100%;
+    }
+
+    .vertical-line{
+        display: inline-block;
+        border-left: 1px solid black;
+        margin: 0 10px;
+        height: 60px;
+    }
+    .page-container {
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  .side-nav-container{
+    width: 20%;
+    border-right: 1px solid rgb(24, 23, 23);
+    margin-right: 5%;
+    background-color: dimgray;
+    height: auto;
+    min-height: 100vh;
+}
+.nav-list{
+  padding: 0;
+}
+.nav-list li{
+  padding: 10px;
+  list-style: none;
+  color:white;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+   cursor: pointer;
+   transition: all .3s ease-in-out;
+}
+.nav-list li:hover{
+  background: #5a5959;
+}
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+  margin-left: 4rem;
+}
+.body-container{
+  width: 70%;
+}
+    img{
+   width:50px ;
+   border-radius:50px;
+}
+.default-section{
+  margin: 20px 0;
+}
+.info-section{
+  display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.info-item{
+  border-right: 1px solid #696969;
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+.info-item span{
+  margin-left: 4rem;
+}
+select {
+  font-family: Cursive;
+  border: 1px solid rgb(24, 23, 23);
+  width: 140px;
+  height: 30px;
+  position: relative;
+  -moz-appearance: none;
+  color: black; 
+   cursor: pointer; 
+   border-radius:50px; 
+            }
+  
+
+</style>
+  </head>
+  <body>
+
+<main class="page-container">  
+  <div class="side-nav-container">
+    <ul class="nav-list">
+      <li>
+          <img src="public/images/dashboard.png" alt="Avatar" style="width: 50px;"><a href=""> Dashboard </a>
+      </li>
+      <li>
+          <img src="public/images/appointment.png" alt="Avatar" style="width: 50px;"><a href=""> Appointment </a>
+      </li>
+      <li>
+          <img src="public/images/patiant.png" alt="Avatar" style="width: 50px;"> <a href="">Patiants </a>
+      </li>
+      <li>
+          <img src="public/images/lab.png" alt="Avatar" style="width: 50px;"> <a href="">Labs </a>
+      </li>
+      <li>
+          <img src="public/images/insurancecom.png" alt="Avatar" style="width: 50px;"><a href="">Insurance Companies</a>
+      </li>
+      <li>
+          <img src="public/images/calender.png" alt="Avatar" style="width: 50px;"><a href="">Calculater</a>
+      </li>
+      <li>
+          <img src="public/images/emailnot.png" alt="Avatar" style="width:50px;"><a href="">Email-Notification</a>
+      </li>
+    </ul>
+  </div>
+  <div class="body-container">
+      <u> <h1>Labs</h1> </u>
+      <section class="default-section">
+          <div class="information">
+              <select name="nameoflabs">
+                <option value="Rafidia Lab">Rafidia Lab </option>
+                <option value="Midicare Lab">Midicare Lab </option>
+                <option value="Ramallah Lab">Ramallah Lab </option>
+                <option value="Salfeet Lab">SALFEET lab </option>
+                <option value="Altheqa Lab">Al-theqa lab </option>
+                <option value="almisa Lab">almisa lab </option>
+                <option value="al baraa Lab">al braaa lab </option>
+                <option value="Tulkareem Lab">Tulkareem lab </option>
+                <option value="Nublus Lab">Nublus lab </option>
+            </select>
+              </div>
+      </section> 
+      <section class="default-sectio">
+        <div class="info-section">
+          <div class="info-item">
+              <img src="public/images/name.png" alt= "Avatar"> 
+              <span>Rafidia Lab </span>
+          </div>
+          <div class="info-item">
+              <img src="public/images/address.png" alt= "Avatar"/>
+              <span>Nablus-Rafidia </span>
+          </div>
+          <span class="horizintal-line"></span>
+          <div class="info-item">
+              <img src="public/images/phone.png" alt= "Avatar">  
+              <span>056966666</span>
+          </div>
+          <div class="info-item">
+              <img src="public/images/email.png" alt= "Avatar">
+              <span>madi1@gmail.com</span>
+          </div>
+          <span class="horizintal-line"></span>
+          <div class="info-item">
+              <img src="public/images/service.png" alt= "Avatar" style="width:45px; border-radius:50px ;border-bottom:1px solid rgb(24, 23, 23);">
+              <span><a href="/services.html"> services </a></span>
+          </div>
+          <div class="info-item">
+              <img src="public/images/requiredsample.png" alt= "Avatar">
+              <span><a href="/requiredsample.html"> Required Sample </a> </span>
+          </div>
+        </div>
+      <p style=" width: 20%;
+      padding: 12px;
+      border: 1px solid rgb(24, 23, 23);
+      border-radius: 20px;
+      box-sizing: border-box;
+      color: black;
+      background-color: #5a5959;
+      margin-top: 6px;
+      margin-bottom: 16px;">  Send Message </p><br> 
+        <textarea name="message"  style="height:150px ;width:700px">  write the massage....</textarea> 
+        <input type ="submit" value="send" style="border-radius: 20px; color: blue; width: 70px; height: 40px;">
+      </section>
+  </div>
+</div>
+
+  </body>
+</html>

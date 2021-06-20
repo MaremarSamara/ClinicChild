@@ -1,0 +1,13 @@
+<%- include ("../partials/header") %>
+    <%- include ("../partials/sideMenu") %>
+  <div class="body-container">
+  <p> The Required Sample:  </p>
+
+  <% labrequiredsamples.forEach(function (requiredsampleforlab) {  %>
+   <p>   <%= requiredsampleforlab.lab_phone %> </p>
+   <p>   <%= requiredsampleforlab.require_sam %> </p>
+    <% }) %>
+   </div>
+  </main>
+  </body>
+  </html>

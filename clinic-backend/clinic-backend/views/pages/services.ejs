@@ -1,0 +1,12 @@
+<%- include ("../partials/header") %>
+    <%- include ("../partials/sideMenu") %>
+  <div class="body-container">
+  <p> OUR SERVICES :  </p>
+
+  <% labservices.forEach(function (labservice) {  %>
+   <p>   <%= labservice.service %> </p>
+    <% }) %>
+   </div>
+  </main>
+  </body>
+  </html>
